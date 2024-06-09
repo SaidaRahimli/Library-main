@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page Icon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/image/icon/logo_icon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- Bootstrap Css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Slick Slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <!-- Global Css -->
+    <link rel="stylesheet" href="./assets/style/global.css" />
+    <title>Catalog Page</title>
+  </head>
+  <body style="background-color: #fff">
+    <div
+      class="catalogContainer w-100 position-relative"
+      style="color: var(--homeMainTextColor)"
+    >
+      <!-- Click Background Shadow -->
+      <div class="clickBgShadow" style="background-color: rgba(0, 0, 0, 0.5)">
+        <!-- Join Us Home Page -->
+        <div class="flex-center">
+          <div class="homePageContainer bg-white">
+            <div class="closeButtonJoinUs d-flex justify-content-end">
+              <i class="fa-sharp fa-solid fa-xmark fa-beat"></i>
+            </div>
+
+            <div class="welcomeAdmin flex-center fontMontSerrat">
+              <h5 class="modal-title textWelcome text-center">Join Us</h5>
+            </div>
+            <div class="inputContainer">
+              <div class="w-100 flex-center">
+                <input
+                  class="modalUsername"
+                  type="text"
+                  placeholder="Full name"
+                />
+              </div>
+              <div class="w-100 flex-center">
+                <input
+                  class="modalPassword"
+                  type="password"
+                  placeholder="Email"
+                />
+              </div>
+            </div>
+
+            <div
+              class="alert alert-danger join-error mx-auto"
+              role="alert"
+              style="display: none"
+            >
+              <h4>Error</h4>
+              <p class="errorInformation">
+                Enter a secure password that meets world standards!
+              </p>
+            </div>
+            <div
+              class="alert alert-success join-success mx-auto"
+              role="alert"
+              style="display: none"
+            >
+              <h4>Successful</h4>
+              <p>Welcome admin panel &#9996;</p>
+            </div>
+
+            <div class="signIn">
+              <button type="button" class="text-white">Join</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Option Home Page -->
+        <div class="d-flex flex-column align-items-end openCloseMenu">
+          <div class="closeButtonHomePage">
+            <img src="./assets/image/icon/close.svg" alt="close" width="16px" />
+          </div>
+          <div class="menuSection">
+            <ul class="d-flex flex-column align-items-end">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./catalog.html">Catalog</a></li>
+              <li><a href="./store.html">About Store</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a href="./search.html">Search</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Header -->
+      <header class="w-100 d-flex justify-content-end">
+        <div class="headerContainer d-flex justify-content-between">
+          <div id="bookLogoHomePage">
+            <img src="./assets/image/icon/red_book.svg" alt="Book logo" />
+          </div>
+          <div class="navContainer align-items-center" style="display: flex">
+            <nav>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./catalog.html">Catalog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./store.html">About Store</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./search.html">Search</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="d-flex align-items-center homejoinUS">
+            <img
+              class="adminAvatar"
+              src="./assets/image/icon/homeAdminLogo.svg"
+              alt="Admin logo"
+              height="21"
+            />
+            <a href="#" class="clickJoinUs">
+              <h2 class="mb-0">Join us</h2>
+            </a>
+            <!-- Mobile Home Page openClose logo -->
+            <div id="openCloseHomeImg" class="d-flex align-items-center">
+              <img
+                src="./assets/image/icon/open_close.svg"
+                alt="logo"
+                style="display: none"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="mainBookLibrary">
+        <!-- Book Options -->
+        <section class="bookOptionsSection">
+          <div class="d-flex justify-content-end">
+            <div class="bookOptionsContainer d-flex">
+              <div class="allBook d-flex align-items-center">
+                <h2 class="mb-0">All Books</h2>
+              </div>
+              <div class="listStyleBooks d-flex align-items-center">
+                <ul class="d-flex mb-3 pl-0 listBooks">
+                  <!-- <li>Fantastic</li>
+                  <li>Self-development</li>
+                  <li>Baby</li>
+                  <li>Clas</li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Books Library All -->
+        <section class="bookLibrarySection">
+          <div class="d-flex justify-content-center">
+            <div id="previousArrowAllbooks" class="previousArrow d-none">
+              <img src="./assets/image/icon/previousArrow.svg" alt="arrow" />
+            </div>
+            <div
+              class="d-flex justify-content-between bookLibraryContainer"
+              id="bookLibraryContainerAllBooks"
+            >
+              <div class="d-flex justify-content-center w-100">
+                <img
+                  class="rounded-circle"
+                  src="./assets/image/loadingTips.gif"
+                  width="100"
+                  alt="rounded"
+                />
+              </div>
+              <!-- <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div> -->
+            </div>
+            <div id="nextArrowAllbooks" class="nextArrow d-none">
+              <img src="./assets/image/icon/nextArrow.svg" alt="arrow" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Book Library Besteller -->
+        <!-- <section class="bookLibrarySectionBesteller">
+          <div class="bestellerTitle d-flex justify-content-center">
+            <h2>Besteller</h2>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="previousArrow">
+              <img src="./assets/image/icon/previousArrow.svg" alt="arrow" />
+            </div>
+            <div class="d-flex justify-content-between bookLibraryContainer">
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="nextArrow">
+              <img src="./assets/image/icon/nextArrow.svg" alt="arrow" />
+            </div>
+          </div>
+        </section> -->
+
+        <!-- Book Library New Releases -->
+        <!-- <section class="bookLibrarySectionNew">
+          <div class="bestellerTitle d-flex justify-content-center">
+            <h2>New releases</h2>
+          </div>
+          <div class="d-flex justify-content-center">
+            <div class="previousArrow">
+              <img src="./assets/image/icon/previousArrow.svg" alt="arrow" />
+            </div>
+            <div class="d-flex justify-content-between bookLibraryContainer">
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+
+              <div class="card libraryCards">
+                <img
+                  src="./assets/image/icon/bookExample.svg"
+                  class="card-img-top"
+                  alt="book"
+                  height="190"
+                />
+                <div class="card-body libraryCardsBody">
+                  <h5 class="card-title">Order in Chaos</h5>
+                  <p class="card-text">Konstantin Koptelov</p>
+                  <button>
+                    <p>READ MORE</p>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="nextArrow">
+              <img src="./assets/image/icon/nextArrow.svg" alt="arrow" />
+            </div>
+          </div>
+        </section> -->
+
+        <!-- Info Book and Image Book Section -->
+        <section
+          class="infoAndImageBook justify-content-end"
+          style="display: none"
+        >
+          <!-- d-flex -->
+          <div class="container pr-0 pl-md-0 pl-lg-5">
+            <div class="row d-flex justify-content-between">
+              <div class="col-md-7 infoTargetBook">
+                <div>
+                  <button class="backButton">
+                    <p>< BACK</p>
+                  </button>
+                </div>
+                <div>
+                  <p class="timeBookAdded d-inline-block">10.06.2024</p>
+                </div>
+                <div class="infoBook">
+                  <h2>Konstantin Koptelov</h2>
+                  <p>2 days ago added</p>
+                  <h3>Konstantin Koptelov</h3>
+                  <p>
+                    s of Kiev can receive an order on the day of its
+                    registration. Customers from other cities of Ukraine can
+                    receive an order within 1-5 days, depending on the location
+                    of the settlement and the selected delivery method. Orders
+                    over UAH 1000 are delivered free of charge *. You can see
+                    the available methods, exact terms and cost of delivery
+                    during checkout in the order basket, after selecting the
+                    delivery city. More details
+                  </p>
+                </div>
+              </div>
+              <div
+                class="col-md-4 d-flex justify-content-center align-items-center"
+              >
+                <div class="imageTargetBook w-100 position-relative">
+                  <div class="position-absolute newBookTitle d-none">
+                    <h2>New</h2>
+                  </div>
+                  <img
+                    src="./assets/image/icon/bookExample.svg"
+                    alt="book"
+                    width="100%"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="anonimMessage" style="display: none">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="anonimMessageInput d-flex align-items-center">
+                  <input
+                    class="yourMessage"
+                    placeholder="your anonim comment..."
+                  />
+                  <button class="submitAnonimMessage">
+                    <img
+                      src="./assets/image/icon/sendMessage.svg"
+                      alt="submit"
+                    />
+                  </button>
+                </div>
+
+                <div class="anonimMessageContentContainer"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section Follow US -->
+        <section>
+          <div
+            class="followUs followUsCatalogPage d-flex flex-column align-items-center"
+          >
+            <h2 class="mb-4">Follow us on social media</h2>
+            <div>
+              <a href="#">
+                <img src="./assets/image/icon/facebook.svg" alt="fecebook" />
+              </a>
+              <a href="#">
+                <img src="./assets/image/icon/twitter.svg" alt="twitter" />
+              </a>
+              <a href="#">
+                <img src="./assets/image/icon/instagram.svg" alt="instagram" />
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <div class="copyright">
+          <div class="d-flex flex-wrap">
+            <div class="copyrightImage d-flex justify-content-end">
+              <img src="./assets/image/icon/logo.svg" height="68" />
+            </div>
+
+            <div class="helpLists d-flex justify-content-center">
+              <div>
+                <ul>
+                  <li>Popular :</li>
+                  <li><a href="./catalog.html">Besteller</a></li>
+                  <li><a href="#" aria-disabled="true">Programming</a></li>
+                  <li><a href="./catalog.html">New Releases</a></li>
+                  <li><a href="#" aria-disabled="true">Business</a></li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li>Cash :</li>
+                  <li><a href="#" aria-disabled="true">Delivery</a></li>
+                  <li><a href="#" aria-disabled="true">Payment</a></li>
+                  <li><a href="./store.html">About the store</a></li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li>Help :</li>
+                  <li><a href="./contact.html">Contact</a></li>
+                  <li><a href="#" aria-disabled="true">Purchase returns</a></li>
+                  <li><a href="#" aria-disabled="true">Buyer help</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-100 d-flex justify-content-center termsOfUse">
+            <strong
+              >All rights reserved © 2003-2024 LIBRARY TERMS OF USE | Privacy
+              Policy</strong
+            >
+          </div>
+
+          <!-- Mobile Navbar -->
+          <div class="navContainerFooter" style="display: none">
+            <nav>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./catalog.html">Catalog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./store.html">About Store</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./search.html">Search</a>
+                </li>
+              </ul>
+            </nav>
+            <hr />
+          </div>
+
+          <!--Privacy policy-->
+          <div class="privacyPolicy">
+            <h2 class="text-center">Library BookStore EACamp © 2003-2024</h2>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- Jquery Pulgins -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script src="./assets/js/database.js"></script>
+
+    <!-- Home Js -->
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

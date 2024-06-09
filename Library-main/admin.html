@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/image/icon/adminLogo.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/global.css" />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <!-- Admin Login -->
+    <div class="adminLogin adminMainbgColor w-100 min-vh-100 d-none">
+      <div class="editLogo">
+        <img src="./assets/image/icon/logo.svg" alt="logo" />
+      </div>
+      <!-- Modal -->
+      <div class="flex-center">
+        <div class="adminContainer bg-white">
+          <div class="welcomeAdmin flex-center fontMontSerrat">
+            <h5 class="modal-title textWelcome text-center">Welcome Admin</h5>
+          </div>
+          <div class="inputContainer">
+            <div class="w-100 flex-center">
+              <input class="modalUsername" type="text" placeholder="Username" />
+            </div>
+            <div class="w-100 flex-center">
+              <input
+                class="modalPassword"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div class="signIn">
+            <button type="button" class="text-white">Join</button>
+          </div>
+
+          <div
+            class="alert alert-danger join-error mx-auto"
+            role="alert"
+            style="display: none"
+          >
+            <h4>Error</h4>
+            <p class="errorInformation">
+              Enter a secure password that meets world standards!
+            </p>
+          </div>
+          <div
+            class="alert alert-success join-success mx-auto"
+            role="alert"
+            style="display: none"
+          >
+            <h4>Successful</h4>
+            <p>Welcome admin panel &#9996;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="adminPanel d-none">
+      <!-- d-flex -->
+      <!-- Admin Panel Left -->
+      <div
+        id="adminPanelLeftSection"
+        class="adminPanelLeft min-vh-100 adminMainbgColor d-inline-block"
+      >
+        <div class="stickyContainer">
+          <div class="d-flex justify-content-between">
+            <div class="adminPanelLogo">
+              <img src="./assets/image/icon/logo.svg" alt="logo" />
+            </div>
+            <div class="closeLogo d-none">
+              <img src="./assets/image/icon/close.svg" alt="logo" />
+            </div>
+          </div>
+          <div class="menuContainer">
+            <ul>
+              <li>
+                <img src="./assets/image/icon/book.svg" alt="book" />
+                <a href="#home">Home</a>
+              </li>
+              <li>
+                <img src="./assets/image/icon/book.svg" alt="book" />
+                <a href="#about">About</a>
+              </li>
+              <li>
+                <img src="./assets/image/icon/book.svg" alt="book" />
+                <a href="#joinUs">Join us</a>
+              </li>
+              <li>
+                <img src="./assets/image/icon/book.svg" alt="book" />
+                <a class="contactLink" href="#contact">Contact</a>
+              </li>
+              <li>
+                <img src="./assets/image/icon/book.svg" alt="book" />
+                <a class="logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Admin Panel Right -->
+      <div class="w-100 panelRight">
+        <!-- Mobile Admin Title Logo -->
+        <div class="d-none responsiveLeftLogo">
+          <div class="bookLogoContainer">
+            <img
+              src="./assets/image/bookStoreLogo.jpg"
+              alt="Book logo"
+              height="80px"
+            />
+          </div>
+          <div>
+            <img
+              id="openCloseImg"
+              src="./assets/image/icon/open_close.svg"
+              alt="logo"
+            />
+          </div>
+        </div>
+
+        <!-- Desctop Admin Title Logo -->
+        <div class="adminTitleLogo">
+          <img src="./assets/image/icon/adminPanel.svg" alt="admin" />
+        </div>
+
+        <!-- Add Books -->
+        <div class="addBooks">
+          <div class="textAddBook">
+            <h2>Add book</h2>
+          </div>
+          <div>
+            <p class="textSearchBook">Search book</p>
+            <div class="d-flex mb-2 align-items-center">
+              <input
+                id="home"
+                class="searchInput"
+                type="text"
+                placeholder="Dan Brown"
+              />
+              <button
+                type="button"
+                class="search d-flex justify-content-center align-items-center"
+              >
+                <i class="fa-brands fa-searchengin fa-beat"></i>
+              </button>
+            </div>
+            <div class="searchTips">
+              <div class="d-flex">
+                <img src="./assets/image/icon/clock.svg" alt="clock" />
+                <p class="d-flex align-items-end">Dan Brown Davinc</p>
+              </div>
+              <div class="d-flex">
+                <img src="./assets/image/icon/clock.svg" alt="clock" />
+                <p class="d-flex align-items-end">Dan Brown Angel</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Book Form -->
+        <div class="bookFormContainer">
+          <div class="textBookForm">
+            <h2>Book form</h2>
+          </div>
+          <div class="formContainer">
+            <form>
+              <div>
+                <label for="bookName">Book Name</label>
+                <input
+                  class="d-block"
+                  id="bookName"
+                  type="text"
+                  placeholder="Angels"
+                />
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <div>
+                <label for="authorName">Author Name</label>
+                <input
+                  class="d-block"
+                  id="authorName"
+                  type="text"
+                  placeholder="Dan Brown"
+                />
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <div>
+                <label for="bookImageUrl1">Book Image Url</label>
+                <input
+                  class="d-block"
+                  id="bookImageUrl1"
+                  type="text"
+                  placeholder="Alex Smith"
+                />
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <div>
+                <label for="publicationYear">Publication Year</label>
+                <input
+                  class="d-block"
+                  id="publicationYear"
+                  type="number"
+                  placeholder="2003"
+                />
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <div class="radioElement">
+                <div class="d-flex align-items-center">
+                  <input type="radio" name="newOrold" id="new" />
+                  <label for="new" class="ml-2">New</label>
+                </div>
+                <div class="d-flex align-items-center">
+                  <input type="radio" name="newOrold" id="old" checked />
+                  <label for="old" class="ml-2">Old</label>
+                </div>
+              </div>
+              <div>
+                <label for="description">Description</label>
+                <textarea
+                  class="d-block"
+                  id="description"
+                  maxlength="1000"
+                  placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+                ></textarea>
+                <span class="formDescriptionLetters ml-1"> 0 / 1000</span>
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <div>
+                <label for="bookType">Book Type</label>
+                <div class="dropdown d-inline-block ml-4">
+                  <button
+                    class="btn btn-success dropdown-toggle dropdownButton"
+                    type="button"
+                    data-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Add New Book Type
+                  </button>
+                  <div class="dropdown-menu py-3 px-2 border-success">
+                    <p class="mb-3">Add Type</p>
+                    <input type="text" class="py-2 px-3 addType" />
+                    <small
+                      class="form-text text-danger ml-1 addTypeError"
+                    ></small>
+                    <button
+                      type="button"
+                      class="mt-4 btn btn-success btn-block addTypeButton"
+                    >
+                      Add Type
+                    </button>
+                  </div>
+                </div>
+                <!-- <input
+                  class="d-block"
+                  id="bookType"
+                  type="text"
+                  placeholder="Fantastic"
+                /> -->
+                <select class="form-control form-control-lg" id="bookType">
+                  <!-- <option>Fantastic</option>
+                  <option>Besteller</option>
+                  <option>Baby</option> -->
+                </select>
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <button type="button" class="btn addButton btn-block">Add</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- About Store -->
+        <div class="aboutStoreContainer">
+          <div class="textAboutStore">
+            <h2>About Store</h2>
+          </div>
+          <div class="storeContainer">
+            <form>
+              <div>
+                <label for="about">Title</label>
+                <input
+                  id="about"
+                  class="d-block"
+                  type="text"
+                  placeholder="About Store"
+                />
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <div>
+                <label for="storeImage">Book Image Url</label>
+                <input
+                  class="d-block"
+                  id="storeImage"
+                  type="text"
+                  placeholder="https://image:url/"
+                />
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <div>
+                <label for="storeDescription">Description</label>
+                <textarea
+                  class="d-block"
+                  id="storeDescription"
+                  maxlength="1000"
+                  placeholder="We work without holidays and weekends! Resident...We work without holidays and weekends! Resident...We work without holidays and weekends! Resident..."
+                ></textarea>
+                <span class="ml-1 descriptionLetters">0 / 1000</span>
+                <small class="form-text text-danger ml-1"></small>
+              </div>
+              <button type="button" class="btn aboutStoreButton btn-block">
+                About info add
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Join Us -->
+        <div class="joinUsContainer">
+          <div class="textJoinUs">
+            <h2 id="joinUs">Join Us</h2>
+          </div>
+          <div class="tableContainer">
+            <table class="table text-center table-bordered">
+              <thead
+                style="background-color: var(--adminMainbgColor); color: white"
+              >
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Full Name</th>
+                  <th scope="col">Email Adress</th>
+                </tr>
+              </thead>
+              <tbody class="infoJoinPeople">
+                <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>Audrey Mckinney</td>
+                  <td>lisa.watson@example.com</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Savannah Howard</td>
+                  <td>jeff.brown@example.com</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Contact Us -->
+        <div id="contactUsContainerForDesctop" class="contactUsContainer">
+          <div class="textContactUs">
+            <h2 id="contact">Contact Us</h2>
+          </div>
+          <div class="contactUsTableContainer">
+            <table class="table text-center table-bordered">
+              <thead
+                style="background-color: var(--adminMainbgColor); color: white"
+              >
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Full Name</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Email Adress</th>
+                  <th scope="col">Phone Number</th>
+                </tr>
+              </thead>
+              <tbody class="infoContactPeople">
+                <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>Audrey Mckinney</td>
+                  <td>1473 Ranchview Dr undefined San Jose</td>
+                  <td>lisa.watson@example.com</td>
+                  <td>(209) 555-0104</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Savannah Howard</td>
+                  <td>8445 Railroad St undefined Tampa</td>
+                  <td>jeff.brown@example.com</td>
+                  <td>(704) 555-0127</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Contact Us for mobile -->
+        <div id="contactUsContainerForMobile" class="joinUsContainer d-none">
+          <div class="textContactUs">
+            <h2 id="contactForMobile">Contact Us</h2>
+          </div>
+          <div class="contactUsTableContainer nameAdress">
+            <table class="table table-bordered text-center">
+              <thead
+                style="background-color: var(--adminMainbgColor); color: white"
+              >
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Full Name</th>
+                  <th scope="col">Adress</th>
+                </tr>
+              </thead>
+              <tbody class="infoContactPeopleHalf">
+                <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>Audrey Mckinney</td>
+                  <td>1473 Ranchview Dr undefined San Jose</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Savannah Howard</td>
+                  <td>8445 Railroad St undefined Tampa</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="contactUsTableContainer emailPhone">
+            <table class="table table-bordered text-center">
+              <thead
+                style="background-color: var(--adminMainbgColor); color: white"
+              >
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Email Adress</th>
+                  <th scope="col">Phone Number</th>
+                </tr>
+              </thead>
+              <tbody class="infoContactPeopleOtherHalf">
+                <!-- <tr>
+                  <th scope="row">1</th>
+                  <td>lisa.watson@example.com</td>
+                  <td>(209) 555-0104</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>jeff.brown@example.com</td>
+                  <td>(704) 555-0127</td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+    <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/admin.js"></script>
+  </body>
+</html>

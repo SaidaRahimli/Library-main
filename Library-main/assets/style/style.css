@@ -1,0 +1,888 @@
+/* Animation */
+@keyframes adminButtonAnime {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(0.98, 0.98);
+  }
+}
+
+@keyframes adminAddButtonAnime {
+  from {
+    transform: scale(1, 1);
+    background-color: var(--inputColor);
+  }
+  to {
+    transform: scale(0.98, 0.98);
+    background-color: #683202;
+  }
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 4px 4px 10px 10px #e5e5e5;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--adminMainbgColor);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+  background-color: #5c0414;
+}
+
+/* ::placeholder {
+  font: 400 23px var(--fontCrimsonText);
+  color: #797667;
+} */
+
+/* For general use */
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.adminMainbgColor {
+  background-color: var(--adminMainbgColor);
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.fontMontSerrat {
+  font-family: var(--montSerrat);
+}
+li {
+  list-style: none;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+/*For special use*/
+.stickyContainer {
+  height: 710px;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.editLogo {
+  padding: 74.96px 0 0 35px;
+  margin-bottom: 160px;
+}
+.welcomeAdmin {
+  margin: 17px 0;
+}
+
+.textWelcome {
+  font-size: 44px;
+}
+.inputContainer div input {
+  border: 1px solid #cecece;
+  width: 80%;
+  padding: 18px 0 18px 50px;
+}
+.inputContainer div:first-child input {
+  margin-bottom: 34px;
+}
+.inputContainer div:last-child input {
+  margin-bottom: 34px;
+}
+.signIn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+.signIn button {
+  background-color: #e16a00;
+  width: 80%;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 14px 0 14px 0;
+}
+.signIn button:hover {
+  background-color: #fd7600;
+  animation: adminButtonAnime 2s linear 0s infinite alternate;
+}
+
+.adminContainer {
+  margin-bottom: 280px;
+  width: 50%;
+}
+.join-success,
+.join-error {
+  width: 80%;
+}
+.join-error-contact,
+.join-success-contact {
+  width: 100%;
+  margin-bottom: 33px;
+}
+.adminPanelLogo {
+  padding: 74px 37px 54px 35px;
+}
+.menuContainer ul li {
+  margin-bottom: 34px;
+}
+.menuContainer ul li img {
+  margin-right: 13px;
+}
+.menuContainer ul li a {
+  font-family: var(--montSerrat);
+  font-weight: 400;
+  color: #fff;
+}
+.adminTitleLogo {
+  display: flex;
+  justify-content: flex-end;
+  margin: 48px 58px 48px 0;
+}
+.panelRight {
+  padding-left: 32px;
+}
+.textAddBook h2,
+.textSearchBook,
+.textAboutStore h2 {
+  font-family: var(--montSerrat);
+  font-weight: 600;
+  font-size: 30px;
+  color: #333333;
+}
+.textAddBook {
+  margin-bottom: 26px;
+}
+.textSearchBook {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+.searchInput {
+  padding: 9px 0 10px 33px;
+  border-radius: 34px;
+  border: 2px solid rgba(57, 31, 0, 0.48);
+  width: 50%;
+  margin-right: 7px;
+}
+.search {
+  width: 63px;
+  height: 40px;
+  border-radius: 34px;
+  background-color: var(--inputColor);
+  border: none;
+}
+.searchTips {
+  width: 50%;
+  background-color: #f1f0f0;
+  border-radius: 35px;
+}
+.searchTips div img {
+  margin: 20px 24px 17.25px 36px;
+}
+.searchTips div p {
+  font-family: "Preahvihear", sans-serif;
+  font-size: 14px;
+  color: #bcbcbc;
+  padding-right: 24px;
+}
+.searchTips div p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--adminMainbgColor);
+}
+.addBooks {
+  margin-bottom: 80px;
+}
+.bookFormContainer,
+.aboutStoreContainer {
+  margin-bottom: 160px;
+  font-family: var(--fontRoboto);
+  font-weight: 400;
+  width: 88%;
+}
+.textBookForm h2 {
+  font-family: var(--montSerrat);
+  font-weight: 600;
+  font-size: 18px;
+  color: #333333;
+}
+.formContainer,
+.storeContainer {
+  padding: 16px 30px 29px 30px;
+}
+.formContainer label,
+.storeContainer {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #030102;
+}
+.formContainer div,
+.formContainer div,
+.storeContainer div,
+.storeContainer div {
+  margin-bottom: 24px;
+}
+.formContainer input,
+.formContainer textarea,
+.storeContainer input,
+.storeContainer textarea {
+  font-size: 16px;
+  padding: 10.5px 12px 10.5px 12px;
+  border: 1px solid #e2e6ee;
+  box-shadow: 0px 4px 18px rgba(158, 168, 189, 0.31);
+  border-radius: 10px;
+  color: #030102;
+  width: 100%;
+}
+.formContainer textarea,
+.storeContainer textarea {
+  font-family: var(--montSerrat);
+  font-weight: 500;
+}
+.radioElement {
+  margin-bottom: 24px;
+}
+.radioElement div:first-child {
+  margin-bottom: 10px;
+}
+.radioElement input {
+  width: auto;
+  margin-bottom: 0;
+}
+.radioElement label {
+  margin-bottom: 0;
+}
+.addButton,
+.aboutStoreButton {
+  background-color: var(--inputColor);
+  color: #fff;
+  font-size: 14px;
+}
+.addButton:hover,
+.aboutStoreButton:hover {
+  color: #fff;
+  animation: adminAddButtonAnime 1s linear 0s infinite alternate;
+}
+.aboutStoreContainer {
+  margin-bottom: 136px;
+}
+.joinUsContainer {
+  margin-bottom: 154px;
+}
+.textJoinUs,
+.textContactUs {
+  margin-bottom: 5px;
+  font: 600 30px var(--montSerrat);
+  color: #333333;
+}
+.tableContainer table,
+.contactUsTableContainer table {
+  font: 400 14px "Nunito Sans", sans-serif;
+  color: #05111a;
+}
+.tableContainer {
+  width: 60%;
+}
+.textContactUs {
+  margin-bottom: 10px;
+}
+.contactUsContainer {
+  margin-bottom: 200px;
+}
+.contactUsTableContainer {
+  width: 95%;
+}
+
+/* HOME PAGE */
+
+/* Animation and Media query */
+@keyframes homeButtonAnime {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(0.95, 0.95);
+  }
+}
+
+/*For special use*/
+/* header {
+  position: fixed;
+  z-index: 999;
+  background-color: #fff;
+  border-bottom: 1px solid #e9e1e5a6;
+  top: 0;
+} */
+.homeHeader {
+  background-color: #e5e5e5;
+}
+.headerContainer {
+  width: 90%;
+  padding: 36px 92px 0 0;
+}
+.mainContainer {
+  width: 90%;
+  padding-right: 85px;
+  margin-top: 146px;
+}
+.homejoinUS h2 {
+  font: 400 14px var(--fontRoboto);
+  color: #241400;
+}
+.homejoinUS img {
+  margin-right: 8px;
+}
+
+.navContainer a {
+  font: 400 14px var(--montSerrat);
+  color: var(--homeMainTextColor);
+  padding: 0;
+}
+.navContainer li:not(:last-child) a {
+  margin-right: 40px;
+}
+.navContainer a:hover {
+  color: var(--adminMainbgColor);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.mainGoCatalog {
+  width: 35%;
+}
+.mainLogo {
+  width: 45%;
+}
+.mainLogo img {
+  width: 100%;
+}
+.mainLogo img:first-child {
+  display: block;
+}
+.mainLogo img:last-child {
+  display: none;
+}
+.mainGoCatalog h2 {
+  font: 900 36px var(--montSerrat);
+}
+.mainGoCatalog p {
+  font: 400 13px var(--montSerrat);
+  width: 80%;
+}
+.mainGoCatalog button p {
+  font: 900 15px var(--montSerrat);
+  color: #fff;
+}
+.mainGoCatalog button {
+  background: #e16a00;
+  width: 50%;
+  padding: 11px 0;
+  border: none;
+  border-radius: 3%;
+}
+.mainGoCatalog button:hover {
+  animation: homeButtonAnime 2s linear 0s infinite alternate;
+}
+.sectionCatalog {
+  margin: 66px 0 136px 0;
+}
+.availableCatalogsTitle {
+  margin-bottom: 47px;
+}
+.availableCatalogsTitle h2 {
+  font: 900 25px var(--montSerrat);
+}
+.availableCatalogs .row div {
+  padding: 0 18px;
+  margin: 0 0 36px 0;
+}
+.availableCatalogs .row div div {
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 24px 0 25px 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0;
+  animation: homeButtonAnime 2s linear 0s infinite alternate;
+}
+.availableCatalogs .row div div:hover {
+  animation: none;
+  text-decoration: underline;
+}
+.availableCatalogs .row p {
+  font: 700 14px var(--montSerrat);
+  margin-bottom: 0;
+}
+.aboutStoreInfo {
+  margin-bottom: 160px;
+  padding: 0 18px;
+}
+.aboutStoreInfo h2 {
+  font: 900 25px var(--montSerrat);
+}
+.aboutStoreInfo h3 {
+  font: 900 50px var(--montSerrat);
+}
+.aboutStoreInfo p {
+  margin-left: 27px;
+  font: 400 13px var(--montSerrat);
+}
+.deliveryContainer {
+  margin-bottom: 134px;
+}
+.deliveryContainer h2 {
+  font: 900 25px var(--montSerrat);
+  margin-bottom: 42px;
+}
+.deliveryContainer p {
+  font: 400 12px var(--montSerrat);
+  width: 73%;
+}
+.followUs {
+  margin-bottom: 133px;
+}
+.followUs h2 {
+  font: 900 25px var(--montSerrat);
+}
+.followUs a:not(:last-child) img {
+  margin-right: 54px;
+}
+.copyright {
+  background-color: #391f00;
+  padding-bottom: 24px;
+}
+.copyrightImage {
+  width: 30%;
+}
+.copyright img {
+  margin: 71px 0 87px 0;
+}
+.helpLists {
+  width: 70%;
+  margin: 56px 0 0 0;
+}
+.helpLists div:not(:last-child) {
+  margin-right: 91px;
+}
+.helpLists li {
+  color: var(--inputColor);
+  font: 400 18px var(--montSerrat);
+}
+.helpLists a {
+  color: #fff;
+}
+.helpLists a:hover {
+  text-decoration: underline;
+}
+.termsOfUse {
+  margin-top: 35px;
+  font: 400 12px var(--montSerrat);
+  color: #fff;
+}
+.navContainerFooter a:hover {
+  color: red;
+  text-decoration: underline;
+}
+.navContainerFooter hr {
+  border: 1px solid rgba(255, 255, 255, 0.59);
+  width: 250px;
+  margin: 32px 0 8px 0;
+}
+.privacyPolicy {
+  display: none;
+  width: 60%;
+}
+.privacyPolicy h2 {
+  font: 400 12px var(--montSerrat);
+  color: #fff;
+}
+
+/* Click Background Shadow */
+.clickBgShadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+/* Home Page Join Us */
+.homePageContainer {
+  width: 40%;
+  margin: 50px 0 0 0;
+  display: none;
+}
+/* Home Page Open Close Menu */
+.openCloseMenu {
+  margin: 43px 0 0 0;
+  display: none;
+}
+.closeButtonHomePage:hover,
+.closeButtonJoinUs:hover {
+  cursor: pointer;
+}
+.closeButtonHomePage {
+  margin: 0 15px 73px 0;
+}
+
+.closeButtonJoinUs {
+  margin: 17px auto 0 auto;
+  width: 80%;
+}
+
+.menuSection {
+  margin: 0 11px 0 0;
+}
+.menuSection ul li:not(:last-child) {
+  margin: 0 0 20px 0;
+}
+.menuSection ul li a {
+  font: 400 17px var(--montSerrat);
+  color: #f2f2f2;
+}
+.menuSection ul li a:hover {
+  text-decoration: underline;
+  color: var(--adminMainbgColor);
+}
+
+/* Catalog Page */
+/* Animation */
+@keyframes catalogCardsAnime {
+  from {
+    transform: scale(1, 1);
+  }
+  to {
+    transform: scale(1.02, 1.02);
+  }
+}
+
+.newBookTitle {
+  background-color: #eb5757;
+  border: 1px solid #dd5151;
+  box-shadow: 0px 3px 8px rgba(225, 106, 0, 0.19);
+  border-radius: 3px;
+  padding: 5px 10px;
+}
+.newBookTitle h2 {
+  font: 900 15px var(--montSerrat);
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.followUsCatalogPage {
+  margin-bottom: 104px;
+}
+.bookOptionsSection {
+  margin: 130px 0 50px 0;
+}
+.bookOptionsContainer {
+  width: 90%;
+}
+.allBook {
+  margin-right: 270px;
+}
+.allBook h2 {
+  font: 900 25px var(--montSerrat);
+}
+.listStyleBooks {
+  overflow-x: auto;
+  width: 400px;
+}
+.listStyleBooks ul li {
+  font: 400 13px var(--montSerrat);
+  text-align: center;
+}
+.listStyleBooks ul li:not(:last-child) {
+  margin-right: 40px;
+}
+.listStyleBooks ul li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--inputColor);
+}
+.bookLibrarySection {
+  margin-bottom: 128px;
+}
+/* .bookLibrarySectionBesteller {
+  margin-bottom: 171px;
+}
+.bookLibrarySectionNew {
+  margin-bottom: 206px;
+} */
+.typeOfBooksSection {
+  margin-bottom: 130px;
+}
+.bookLibraryContainer {
+  width: 90%;
+}
+.previousArrow,
+.nextArrow {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.previousArrow {
+  margin-right: 30px;
+  margin-left: 10px;
+}
+.nextArrow {
+  margin-left: 30px;
+  margin-right: 10px;
+}
+.libraryCards {
+  padding: 24px 25px 17px 25px;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  animation: catalogCardsAnime 1.5s linear 0s infinite alternate;
+}
+.libraryCardsBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+}
+.libraryCardsBody h5 {
+  font: 700 14px var(--montSerrat);
+  margin: 30px 0 10px 0;
+}
+.libraryCardsBody p {
+  font: 400 12px var(--montSerrat);
+  margin-bottom: 16px;
+}
+.libraryCardsBody button {
+  padding: 10px 27px;
+  background-color: var(--inputColor);
+  border: none;
+  box-shadow: 0px 3px 8px rgba(225, 106, 0, 0.19);
+  border-radius: 3px;
+}
+.libraryCardsBody button p {
+  font: 900 12px var(--montSerrat);
+  color: #ffffff;
+  margin-bottom: 0;
+}
+.bestellerTitle {
+  margin-bottom: 50px;
+}
+.bestellerTitle h2 {
+  font: 900 25px var(--montSerrat);
+}
+.infoAndImageBook {
+  margin: 180px 0 110px 0;
+}
+/* .imageTargetBook {
+  padding-left: 140px;
+} */
+.backButton {
+  background-color: var(--inputColor);
+  border: none;
+  padding: 10px 30px 10px 9px;
+  box-shadow: 0px 3px 8px rgba(225, 106, 0, 0.19);
+  border-radius: 3px;
+  margin-bottom: 80px;
+}
+.backButton p {
+  margin: 0;
+  font: 900 12px var(--montSerrat);
+  color: #fff;
+}
+.timeBookAdded {
+  background: #2f80ed;
+  box-shadow: 0px 3px 8px rgba(225, 106, 0, 0.19);
+  border-radius: 3px;
+  padding: 7px 20px;
+}
+.timeBookAdded {
+  font: 900 12px var(--montSerrat);
+  color: #fff;
+}
+.infoBook h2 {
+  font: 700 35px var(--montSerrat);
+}
+.infoBook p:first-of-type {
+  font: 700 16px var(--montSerrat);
+}
+.infoBook p:last-of-type {
+  font: 400 18px var(--montSerrat);
+  text-align: justify;
+  line-height: 35px;
+}
+.infoBook h3 {
+  font: 400 22px var(--montSerrat);
+}
+.anonimMessage {
+  margin-bottom: 150px;
+}
+.anonimMessageInput input {
+  flex-grow: 8;
+  padding: 19px 0 19px 38px;
+  border: none;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-right: 19px;
+}
+.anonimMessageInput button {
+  flex-grow: 2;
+  padding: 19px 0;
+  border-radius: 5px;
+  background-color: var(--inputColorUserPage);
+  border: none;
+}
+.anonimMessageContent {
+  margin-top: 50px;
+  padding: 30px 18px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+.anonimMessage h2 {
+  font: 500 16px "Rubik", sans-serif;
+  color: var(--fontRubik);
+}
+.anonimMessage p {
+  font: 400 16px var(--fontRubik);
+  line-height: 24px;
+  text-align: justify;
+}
+
+/* About Store And Contact Us Page */
+.aboutStoreSection,
+.contactUsSection {
+  margin: 115px 0 200px 0;
+}
+.aboutStoreMain {
+  width: 90%;
+  padding-right: 57px;
+}
+.infoStore {
+  margin-right: 72px;
+}
+.infoStore h2 {
+  font: 900 36px var(--montSerrat);
+  margin-bottom: 11px;
+}
+.infoStore p {
+  font: 400 18px var(--montSerrat);
+  line-height: 35px;
+  text-align: justify;
+}
+.contactTitle h2 {
+  font: 900 36px var(--montSerrat);
+  margin-bottom: 28px;
+}
+.sendButton {
+  margin-top: 10px;
+  background-color: var(--inputColorUserPage);
+  padding: 17px 0;
+  border: none;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+.sendButton p {
+  font: 400 30px var(--fontCrimsonText);
+  margin-bottom: 0;
+  color: #fff;
+}
+.contactUsSection input {
+  background: #ffffff;
+  border: 1px solid #cecece;
+  padding: 25px 0 25px 38px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: 33px;
+  width: 100%;
+}
+.contactUsSection input {
+  font: 400 23px var(--fontCrimsonText);
+  color: #797667;
+}
+.callUs div h2 {
+  font: 900 12px var(--montSerrat);
+  color: #fff;
+}
+.callUs button {
+  border: 1px solid var(--inputColorUserPage);
+  color: var(--inputColorUserPage);
+  padding: 4px 6px 4px 6px;
+  font: 500 14px var(--montSerrat);
+  background-color: #391f00;
+}
+.callUs button:hover {
+  transform: scale(0.98, 0.98);
+}
+
+/* Search Page */
+.searchSection {
+  margin: 138px 0 124px 0;
+}
+.searchContainer {
+  width: 90%;
+}
+.searchTitle {
+  font: 700 36px var(--montSerrat);
+  margin-bottom: 44px;
+}
+.searchInputAndButton {
+  width: 30%;
+}
+.searchInputAndButton input {
+  background: #ffffff;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 23px 0 23px 27px;
+  margin-bottom: 44px;
+}
+.searchInputAndButton button {
+  background: #e16a00;
+  color: #fff;
+  font: 400 30px var(--fontCrimsonText);
+  border-radius: 5px;
+  border: none;
+  padding: 12px 0;
+}
+.searchResult {
+  width: 65%;
+}
+.searchBookAndInfo {
+  margin: 0 30px;
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  padding: 47px 56px 134px 31px;
+}
+.nextSearchResult {
+  margin-right: 12px;
+}
+.previousSearchResult:hover,
+.nextSearchResult:hover {
+  cursor: pointer;
+}
+.searchBookAndInfo div img {
+  margin-right: 30px;
+}
+.searchBookInfo h2 {
+  font: 700 24px var(--montSerrat);
+  margin-bottom: 12px;
+}
+.searchBookInfo h3 {
+  font: 400 18px var(--montSerrat);
+  margin-bottom: 12px;
+}
+.searchBookInfo p {
+  font: 400 14px var(--montSerrat);
+  line-height: 27px;
+  text-align: justify;
+}
+
+a[aria-disabled="true"] {
+  color: #888;
+  text-decoration: none;
+  cursor: not-allowed;
+}
+a[aria-disabled="true"]:hover {
+  text-decoration: none;
+}
